@@ -4,7 +4,8 @@ describe('VField', () => {
   describe('по умолчанию', () => {
     it('содержит поле ввода', () => {
       cy.mount(VField)
-      cy.get('input').should('exist')
+      // cy.get('input').should('exist')
+      cy.input('Поле ввода').should('exist')
     })
   })
 })
