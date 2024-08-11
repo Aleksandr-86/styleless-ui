@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
+    "build:tailwind": "npx tailwindcss -i ./src/assets/input.css -o ./src/assets/main.css --watch",
     "preview": "vite preview",
     "test:e2e": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "test:e2e:ci": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
@@ -27,6 +28,7 @@
     "@vue/eslint-config-prettier": "9.0.0",
     "@vue/eslint-config-typescript": "13.0.0",
     "@vue/tsconfig": "0.5.1",
+    "autoprefixer": "10.4.20",
     "cypress": "13.12.0",
     "eslint": "8.57.0",
     "eslint-plugin-cypress": "3.3.0",
@@ -34,9 +36,10 @@
     "npm-run-all2": "6.2.0",
     "prettier": "3.2.5",
     "start-server-and-test": "2.0.4",
+    "tailwindcss": "3.4.7",
     "typescript": "5.5.3",
     "vite": "5.3.1",
     "vite-plugin-vue-devtools": "7.3.1",
-    "vue-tsc": "2.0.21"
+    "vue-tsc": "2.0.29"
   }
 }
