@@ -1,6 +1,12 @@
+<script lang="ts" setup>
+export interface Some {
+  a: number
+}
+</script>
+
 <template>
-  <div class="flex flex-col gap-y-2">
-    <label class="text-gray-400">asdf</label>
-    <input class="h-10 border border-red" />
+  <div>
+    <label class="m-5 text-gray-400">asdf1</label>
+    <input class="border-red h-10 border" />
   </div>
 </template>

@@ -1,6 +1,8 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
+import './assets/main.css'
+import VField from '@/components/field/VField.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App).component('VField', VField)
+
+app.mount('#app')

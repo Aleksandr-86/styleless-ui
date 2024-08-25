@@ -11,6 +11,5 @@ describe('VField', () => {
       cy.mount(VField)
       cy.get('input').should('exist')
     })
-
   })
 })
