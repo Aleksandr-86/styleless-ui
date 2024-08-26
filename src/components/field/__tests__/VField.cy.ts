@@ -1,14 +1,9 @@
-import VField from '@/components/field/VField.vue'
+import TestComponent from './TestComponent.vue'
 
 describe('VField', () => {
   describe('по умолчанию', () => {
-    it.only('содержит ярлык', () => {
-      cy.mount(VField)
-      cy.get('label').should('exist')
-    })
-
     it('содержит поле ввода', () => {
-      cy.mount(VField)
+      cy.mount(TestComponent)
       cy.get('input').should('exist')
     })
   })

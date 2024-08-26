@@ -5,8 +5,29 @@ export interface Some {
 </script>
 
 <template>
-  <div>
-    <label class="m-5 text-gray-400">asdf1</label>
-    <input class="border-red h-10 border" />
+  <!-- Контейнер компонента -->
+  <div class="flex">
+    <slot name="before"></slot>
+
+    <!-- Контейнер поля ввода -->
+    <div class="field__input-container">
+      <slot name="prepend"></slot>
+      <input class="h-full" />
+      <slot name="append"></slot>
+    </div>
+
+    <slot name="after"></slot>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.field {
+  &__input-container {
+    display: flex;
+  }
+
+  &__input {
+    background-color: red;
+  }
+}
+</style>
