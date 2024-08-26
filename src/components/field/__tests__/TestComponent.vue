@@ -4,13 +4,21 @@ import VField from '@/components/field/VField.vue'
 
 <template>
   <VField>
-    <template #before>b</template>
+    <template #before>
+      <div>before</div>
+    </template>
 
-    <template #prepend>p</template>
+    <template #prepend>
+      <div>prepend</div>
+    </template>
 
-    <template #append>ap</template>
+    <template #append>
+      <div>append</div>
+    </template>
 
-    <template #after>af</template>
+    <template #after>
+      <div>after</div>
+    </template>
   </VField>
 </template>
 
