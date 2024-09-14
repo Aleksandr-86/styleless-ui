@@ -2,6 +2,10 @@
 export interface Some {
   a: number
 }
+
+defineProps<{
+  some?: string
+}>()
 </script>
 
 <template>
@@ -26,7 +30,6 @@ export interface Some {
     display: flex;
     align-items: center;
     width: 100%;
-
     height: 300px;
     column-gap: 0.3125rem;
 
