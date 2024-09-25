@@ -1,19 +1,5 @@
 <script lang="ts" setup>
 import VField from '@/components/field/VField.vue'
-
-type BaseMessage = { id: string; timestamp: number }
-
-type TextMessage = BaseMessage & { text: string; url?: never }
-type ImgMessage = BaseMessage & { imgPath: string }
-type UrlMessage = BaseMessage & { url: string }
-type Message = TextMessage | UrlMessage | ImgMessage
-
-const message: Message = {
-  id: '1',
-  timestamp: new Date().getTime(),
-  text: 'something',
-  url: 'https://typed.rocks',
-}
 </script>
 
 <template>
@@ -35,9 +21,3 @@ const message: Message = {
     </template>
   </VField>
 </template>
-
-<!-- <style scoped>
-:deep(.field__input-container) {
-  background-color: red;
-}
-</style> -->

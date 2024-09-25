@@ -10,13 +10,15 @@ defineProps<{
 
 <template>
   <!-- Контейнер компонента -->
-  <div class="field__container">
+  <div>
     <slot name="before"></slot>
 
     <!-- Контейнер поля ввода -->
     <div class="field__input-container">
       <slot name="prepend"></slot>
+
       <input class="field__input" />
+
       <slot name="append"></slot>
     </div>
 
@@ -24,11 +26,11 @@ defineProps<{
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .field {
   &__container {
-    display: flex;
     align-items: center;
+    display: flex;
     width: 100%;
     height: 300px;
     column-gap: 0.3125rem;
