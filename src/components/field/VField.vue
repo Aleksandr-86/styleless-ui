@@ -1,28 +1,29 @@
 <script lang="ts" setup>
-export interface Some {
-  a: number
-}
+// interface Props {
+//   modelValue: string
+// }
 
-defineProps<{
-  some?: string
-}>()
+// defineProps<Props>()
+
+const model = defineModel()
 </script>
 
 <template>
   <!-- Контейнер компонента -->
-  <div>
-    <slot name="before"></slot>
+  <div class="field__container">
+    <div class="field__slot_before"><slot name="before"></slot></div>
 
     <!-- Контейнер поля ввода -->
     <div class="field__input-container">
-      <slot name="prepend"></slot>
+      <div class="field__slot_prepend"><slot name="prepend"></slot></div>
 
-      <input class="field__input" />
+      <!-- Поле ввода -->
+      <input v-model="model" class="field__input" />
 
-      <slot name="append"></slot>
+      <div class="field__slot_append"><slot name="append"></slot></div>
     </div>
 
-    <slot name="after"></slot>
+    <div class="field__slot_after"><slot name="after"></slot></div>
   </div>
 </template>
 
@@ -30,12 +31,11 @@ defineProps<{
 .field {
   &__container {
     align-items: center;
+    overflow: hidden;
     display: flex;
     width: 100%;
-    height: 300px;
-    column-gap: 0.3125rem;
 
-    background-color: aqua;
+    // background-color: aqua;
   }
 
   &__input-container {
@@ -43,15 +43,33 @@ defineProps<{
     align-items: center;
     height: 100%;
     width: 100%;
-    column-gap: 0.3125rem;
 
-    background-color: blueviolet;
+    // background-color: blueviolet;
   }
 
   &__input {
     height: 100%;
     width: 100%;
-    background-color: red;
+    background-color: transparent;
+    outline: none;
+    // background-color: red;
   }
+
+  &__slot_before:empty,
+  &__slot_prepend:empty,
+  &__slot_append:empty,
+  &__slot_after:empty {
+    display: none;
+  }
+
+  &__slot_after {
+    min-width: fit-content;
+  }
+
+  // &__slot_after {
+  // overflow: visible;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+  // }
 }
 </style>

@@ -1,4 +1,4 @@
-import TestComponent from './TestComponent.vue'
+import TestComponent from '../TestComponent.vue'
 
 describe('VField', () => {
   describe('по умолчанию', () => {
