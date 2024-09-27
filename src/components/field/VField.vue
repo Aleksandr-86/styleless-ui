@@ -30,26 +30,26 @@ const model = defineModel()
 <style lang="scss">
 .field {
   &__container {
-    align-items: center;
-    overflow: hidden;
     display: flex;
+    align-items: center;
     width: 100%;
+    overflow: hidden;
   }
 
   &__input-container {
     display: flex;
     align-items: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
 
     // background-color: blueviolet;
   }
 
   &__input {
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
     outline: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
 
     // background-color: wheat;
   }
@@ -59,8 +59,8 @@ const model = defineModel()
   &__slot_append,
   &__slot_after {
     display: flex;
-    height: 100%;
     align-items: center;
+    height: 100%;
   }
 
   &__slot_before:empty,
