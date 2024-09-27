@@ -34,8 +34,6 @@ const model = defineModel()
     overflow: hidden;
     display: flex;
     width: 100%;
-
-    // background-color: aqua;
   }
 
   &__input-container {
@@ -52,7 +50,17 @@ const model = defineModel()
     width: 100%;
     background-color: transparent;
     outline: none;
-    // background-color: red;
+
+    // background-color: wheat;
+  }
+
+  &__slot_before,
+  &__slot_prepend,
+  &__slot_append,
+  &__slot_after {
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
 
   &__slot_before:empty,
@@ -62,14 +70,20 @@ const model = defineModel()
     display: none;
   }
 
-  &__slot_after {
-    min-width: fit-content;
-  }
+  // &__slot_before {
+  //   background-color: aqua;
+  // }
+
+  // &__slot_prepend {
+  //   background-color: aquamarine;
+  // }
+
+  // &__slot_append {
+  //   background-color: red;
+  // }
 
   // &__slot_after {
-  // overflow: visible;
-  // text-overflow: ellipsis;
-  // white-space: nowrap;
+  //   background-color: yellowgreen;
   // }
 }
 </style>

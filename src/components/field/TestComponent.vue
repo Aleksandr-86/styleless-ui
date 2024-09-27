@@ -6,7 +6,7 @@ const model = defineModel()
 </script>
 
 <template>
-  <VField v-model="model" class="input-field">
+  <VField v-model="model" class="input-field h-[59px]">
     <template #before>
       <div>before</div>
     </template>
@@ -41,6 +41,12 @@ const model = defineModel()
   & .field__input-container,
   & .field__input {
     border-radius: 0.25rem; // 4px
+  }
+
+  & .field__slot_append {
+    // order: 3;
+    border-radius: 0.25rem; // 4px
+    background-color: red;
   }
 }
 </style>
