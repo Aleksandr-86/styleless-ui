@@ -1,34 +1,43 @@
 <script lang="ts" setup>
-// interface Props {
-//   modelValue: string
-// }
+import { ref } from 'vue'
+import VInput from '@/components/input/VInput.vue'
 
-// defineProps<Props>()
+interface Props {
+  // modelValue: string
+  /** Идентификатор поля ввода */
+  id: string | undefined
+}
+
+defineProps<Props>()
 
 const model = defineModel()
+
+const greetingMessage = ref('0234{{ greetingMessaglakjfd }}29348')
 </script>
 
 <template>
   <!-- Контейнер компонента -->
-  <div class="field__container">
-    <div class="field__slot_before"><slot name="before"></slot></div>
+  <div class="v-field__container">
+    <div class="v-field__slot_before"><slot name="before"></slot></div>
 
     <!-- Контейнер поля ввода -->
-    <div class="field__input-container">
-      <div class="field__slot_prepend"><slot name="prepend"></slot></div>
+    <div class="v-field__input-container">
+      <div class="v-field__slot_prepend"><slot name="prepend"></slot></div>
 
       <!-- Поле ввода -->
-      <input v-model="model" class="field__input" />
+      <VInput :id v-model="model" />
 
-      <div class="field__slot_append"><slot name="append"></slot></div>
+      <div class="v-field__slot_append">
+        <slot :count="5" :text="greetingMessage" name="append"></slot>
+      </div>
     </div>
 
-    <div class="field__slot_after"><slot name="after"></slot></div>
+    <div class="v-field__slot_after"><slot name="after"></slot></div>
   </div>
 </template>
 
 <style lang="scss">
-.field {
+.v-field {
   &__container {
     display: flex;
     align-items: center;
@@ -48,6 +57,7 @@ const model = defineModel()
   &__input {
     outline: none;
     background-color: transparent;
+    background-color: red;
     width: 100%;
     height: 100%;
 
