@@ -5,11 +5,7 @@
   "singleQuote": true,
   "printWidth": 100,
   "trailingComma": "all",
-  "plugins": [
-    "prettier-plugin-css-order",
-    "prettier-plugin-organize-attributes",
-    "prettier-plugin-tailwindcss"
-  ],
+  "plugins": ["prettier-plugin-css-order", "prettier-plugin-organize-attributes", "prettier-plugin-tailwindcss"],
   "attributeGroups": [
     "^:?is$",
     "^v-for$",
