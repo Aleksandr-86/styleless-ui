@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, ref, useSlots } from 'vue'
 import VInput from '@/components/input/VInput.vue'
 
 import type { InputProps, InputEmits } from '@/components/input/VInput.vue'
@@ -32,7 +32,11 @@ const hasError = computed(() => true)
       <p>{{ prefix }}</p>
     </div>
 
-    <VInput :id v-model="model" class="v-field__input" name="color" type="sum" />
+    <form @submit.prevent>
+      <VInput :id v-model="model" class="v-field__input" maxlength="5" minlength="3" />
+      <input required />
+      <button type="submit">lakdfj</button>
+    </form>
 
     <div v-if="suffix" class="v-field__suffix">
       <p>{{ suffix }}</p>
@@ -70,6 +74,11 @@ const hasError = computed(() => true)
     display: flex;
     align-items: center;
     height: 100%;
+  }
+
+  &__slot_prepend:empty,
+  &__slot_append:empty {
+    display: none;
   }
 }
 </style>

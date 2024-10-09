@@ -22,7 +22,7 @@ const id = useId()
   <div class="flex flex-col gap-1">
     <label :for="id">{{ label }}</label>
 
-    <VField :id v-model="model" class="input-field" suffix="s!">
+    <VField :id v-model="model" class="input-field" prefix="p!" suffix="s!">
       <template #prepend>
         <Icon color="white" height="18px" icon="mdi:search" />
         <Icon color="white" height="18px" icon="mdi:search" />
@@ -55,6 +55,14 @@ const id = useId()
   & .v-field__slot_prepend {
     column-gap: 4px;
     padding-right: 4px;
+  }
+
+  & .v-field__prefix {
+    padding-right: 4px;
+  }
+
+  & .v-field__suffix {
+    padding-left: 4px;
   }
 
   & .v-field__slot_append {
