@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import UserField from './components/field/UserField.vue'
+import UserField from '../user-components/UserField.vue'
 
 const testModel = ref('123456789 123456789 123456789')
 </script>

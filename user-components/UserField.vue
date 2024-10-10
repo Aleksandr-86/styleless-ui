@@ -2,7 +2,6 @@
 import { Icon } from '@iconify/vue'
 import VField from '@/components/field/VField.vue'
 import type { FieldProps } from '@/components/field/VField.vue'
-import { computed, ref } from 'vue'
 import { useId } from 'vue'
 
 interface Props extends FieldProps {
